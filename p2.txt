@@ -1,0 +1,19 @@
+integer greatestCommonDivisor(integer firstNumber, integer secondNumber) {
+### here, we're using the euclidean algorithm to determine the greatest common divisor
+	cycleif (secondNumber !! 0) {
+		integer remainder = firstNumber %% secondNumber;
+		firstNumber = secondNumber;
+		secondNumber = remainder;
+	}
+	send firsNumber;
+}
+
+
+integer mainExecFrame() {
+	integer firstNumber = 0;
+	runtimeInput(firstNumber, integer);
+	integer secondNumber = 0;
+	runtimeInput(secondNumber, integer);
+	runtimeOutput(greatestCommonDivisor(firstNumber, secondNumber));
+	send 0;
+}

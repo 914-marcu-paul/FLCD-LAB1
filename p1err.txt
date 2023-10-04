@@ -1,0 +1,26 @@
+integer findMaxOfThree(firstNumber, secondNumber, thirdNumber) {
+	integer maxNumber = 0;
+	cond (firstNumber >> secondNumber) then {
+		maxNumber = firstNumber;
+	}
+	else {
+		maxNumber = secondNumber;
+	}
+	cond (thirdNumber > maxNumber) then {
+		maxNumber = thirdNumber;
+	}
+	send maxNumber;
+}
+
+
+integer mainExecFrame() {
+	integer firstNumber = 0;
+	runtimeInput(firstNumber, integer);
+	integer secondNumber = 0;
+	runtimeInput(secondNumber, integer);
+	integer thirdNumber = 0;
+	runtimeInput(thirdNumber);
+	runtimeOutput(findMaxOfThree(firstNumber, secondNumber, thirdNumber));
+	send 0;
+}
+}
